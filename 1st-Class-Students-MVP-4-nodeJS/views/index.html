@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <h1>Home</h1>
+
+    <% if (user): %>
+        <p>Hello <%= user.name %></p>
+        <p><a href="logout">Logout</a></p>
+    <% else: %>
+        <P><a href="login">Login</a> or <a href="signup.html">Signup</a></P>
+    <% endif; %>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

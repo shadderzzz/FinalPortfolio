@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Alignment Classes */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Maximum Content Width */
+.mid-content {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Font Family */
+.body,
+h1,
+p,
+a,
+span {
+    font-family: arial;
+}
+
+h2 {
+  font-family: arial narrow;
+}
+
+h3 {
+  font-family: arial, serif;
+}
+
+p {
+  font-family: arial, serif;
+}
+
+p1 {
+  font-family: arial, serif;
+}
+
+/* Header Styles */
+.header-section {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 6px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    width: 100%;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+.logo img {
+    height: 170px;
+    float: left;
+}
+
+.header-menu {
+    width: 35%; /* Adjust the width as needed */
+    margin-top: 30px; /* Adjust the top margin to move the navigation links down */
+}
+
+.primary-menu {
+    background-color: ghostwhite; /* Set background color on the primary menu container */
+}
+
+.primary-menu ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0;
+    margin: 0;
+}
+
+.primary-menu ul li {
+    display: inline-block;
+    width: auto; /* Set width to auto to fit the content */
+}
+
+.primary-menu ul li a {
+    display: block;
+    padding: 1px 30px; /* Increase the padding to make the links bigger */
+    line-height: 77px;
+    transition: all 1s ease;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px; /* Adjust the font size to make the links bigger */
+    color: black; /* Change the font color to black */
+}
+
+.primary-menu ul li a:hover {
+    background-color: #F9B8A7;
+}
+
+.header-btn {
+    color: #767af2;
+    font-size: 22px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 4px solid #767af2;
+    margin-top: 44px;
+    margin-left: 60px;
+    border-radius: 30px;
+    font-weight: bold; /* Add this line */
+    transition: all 1s ease;
+    text-decoration: none; /* Add this line to remove underline */
+}
+
+.header-btn:hover {
+    background: #F9B8A7;
+    border: 4px solid#3498db ;
+    color: #3498db;
+}
+
+/* Dropdown menu css */
+.primary-menu ul li {
+    position: relative;
+    z-index: 10;
+}
+
+.primary-menu ul li ul {
+    position: absolute;
+    left: -9999px;
+}
+
+.primary-menu ul li:hover ul {
+    left: 0px;
+    width: 200px;
+    background: Ghostwhite;
+}
+
+.primary-menu ul li ul li a {
+    font-size: 12px; /* Adjust the font size for the drop-down links */
+}
+
+/* Main Section */
+.main-section {
+    margin-top: 200px; /* Adjust as needed to prevent overlap with the fixed header */
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.slogan {
+    text-align: center;
+}
+
+.slogan h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.reg-button {
+    display: inline-block;
+    padding: 10px 20px; /* Increase padding for larger size */
+    background-color: #5054AF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 45px;
+    font-size: 27px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reg-button:hover {
+    background-color: #FF5627;
+}
+
+
+/* About Section */
+.about-section {
+margin-top: 200px;
+    padding: 50px 20px; 
+    max-width: 800px;
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+
+}
+
+.about-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #3e3d45;
+    margin-bottom: 50px;
+}
+
+.about-section p1 {
+    font-size: 18px;
+    color: #3e3d45;
+    margin-bottom: 45px;
+}
+
+/* Resource Section */
+.resource-section {
+margin-top: 200px;
+    padding: 50px 20px; 
+    max-width: 800px;
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+
+}
+
+.resource-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-section p {
+    font-size: 18px;
+    color: #3e3d45;
+    margin-bottom: 50px;
+}
+
+.resource-section p1 {
+    font-size: 18px;
+    color: #3e3d45;
+    margin-bottom: 45px;
+}
+

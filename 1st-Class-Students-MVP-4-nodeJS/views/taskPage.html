@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/TaskPagestyle.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="task-manager-container">
+        <!-- Header section -->
+        <!-- Header content goes here -->
+        
+        <!-- Main content section -->
+        <div class="task-manager-content">
+            <!-- Task buttons -->
+            <div class="task-buttons">
+                <!-- Buttons go here -->
+            </div>
+
+            <!-- Task display section -->
+            <div class="task-display-section">
+                <!-- Task display buttons -->
+                <!-- Buttons go here -->
+
+                <!-- Header displaying the currently selected task display button -->
+                <!-- Header content goes here -->
+
+                <div class="task-displays">
+                    <% tasks.forEach(task => { %>
+                        <div class="task-card in-progress-tasks">
+                            <div class="task-box">
+                                <span class="task-title"><%= task.title %></span>
+                                <span class="task-date"><%= task.day %>, <%= task.month %> <%= task.year %></span>
+                                <span class="task-time"><%= task.hour %>:<%= task.minutes %></span>
+                                <span class="task-notes"><%= task.notes %></span>
+                            </div>
+                            <form method="post" action="/taskPage/deleteTask">
+                                <input type="hidden" name="task_id" value="<%= task.idtasks %>">
+                                <button type="submit" name="delete_task">Delete</button>
+                            </form>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

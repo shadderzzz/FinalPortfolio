@@ -1,0 +1,74 @@
+<!-- edittask.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/taskPageStyle.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <!-- Main container for the entire task manager -->
+    <div class="task-manager-container">
+        <!-- Header section containing live date and small calendar UI -->
+        <div class="header">
+            <div class="live-date"> <!-- Live date display -->
+                <!-- Actual live date content will be dynamically updated here -->
+                <!-- JS Code needed here for real dynamic date display, this is just a placeholder. thx Joseph ;P -->
+                <h2><span id="current-date">Saturday 20-01-2024</span></h2>
+            </div>
+            <div class="small-calendar"> <!-- Small calendar UI -->
+                <!-- Current month calendar content will be dynamically updated here -->
+            </div>
+        </div>
+
+        <!-- Main content section for task manager features -->
+        <div class="task-manager-content">
+            <!-- Task buttons for various actions -->
+            <div class="task-buttons">
+                <a href="/taskPage"><button>Home</button></a>
+                <button>Create New List</button>
+                <a href="/addevent"><button>Add Event</button></a>
+                <a href="/edittask"><button>Edit Event</button></a>
+                <a href="/deletetask"><button>Delete Event</button></a>
+                <button>Auto Schedule Event</button>
+                <button>Add Reminder</button>
+                <button>Import List</button>
+            </div>
+
+            <!-- Task display section -->
+            <div class="task-display-section">
+                <!-- Task display buttons for different views -->
+                <div class="task-display-buttons">
+                    <button id="in-progress-btn" class="selected">Tasks in Progress</button>
+                    <button id="upcoming-btn">Upcoming Tasks</button>
+                    <button id="completed-btn">Completed Tasks</button>
+                    <button id="all-events-btn">All Events</button>
+                </div>
+
+                <!-- Header displaying the currently selected task display button -->
+                <div class="selected-header">
+                    <h3><span id="selected-display-title">Tasks in Progress</span></h3>
+                </div>
+
+                <div class="task-displays">
+                    <% tasks.forEach(task => { %>
+                        <div class="task-card in-progress-tasks">
+                            <div class="task-box">
+                                <span class="task-title"><%= task.title %></span>
+                                <span class="task-date"><%= task.formattedDate %></span>
+                                <span class="task-time"><%= task.hour %>:<%= task.minutes %></span>
+                                <span class="task-notes"><%= task.notes %></span>
+                            </div>
+                            <form method="get" action="/editevent">
+                                <input type="hidden" name="task_id" value="<%= task.idtasks %>">
+                                <button type="submit" name="edit_task">Edit</button>
+                            </form>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- editevent.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/TaskPagestyle.css">
+    <title>Edit Event - Task Manager</title>
+</head>
+<body>
+    <!-- Main container for the entire task manager -->
+    <div class="task-manager-container">
+        <!-- Header section containing live date and small calendar UI -->
+        <div class="header">
+            <div class="live-date"> <!-- Live date display -->
+                <!-- Actual live date content will be dynamically updated here -->
+                <!-- JS Code needed here for real dynamic date display, this is just a placeholder. thx Joseph ;P -->
+                <h2><span id="current-date">Saturday 20-01-2024</span></h2>
+            </div>
+            <div class="small-calendar"> <!-- Small calendar UI -->
+                <!-- Current month calendar content will be dynamically updated here -->
+            </div>
+        </div>
+
+        <!-- Main content section for task manager features -->
+        <div class="task-manager-content">
+            <!-- Edit Event form section -->
+            <div class="add-event-section">
+                <% if (task) { %>
+                    <form method="post" action="/updateTask">
+                        <!-- Edit Event form content goes here -->
+                        <!-- Include input fields for various details (day, month, year, hour, minutes, title, venue, notes, etc.) -->
+                        <input type="hidden" name="task_id" value="<%= task.idtasks %>">
+                        <label for="event-title">Title:</label>
+                        <input type="text" id="event-title" name="title" value="<%= task.title %>" required>
+
+                        <label for="event-day">Day:</label>
+                        <input type="number" id="event-day" name="day" value="<%= task.day %>" required>
+
+                        <label for="event-month">Month:</label>
+                        <input type="number" id="event-month" name="month" value="<%= task.month %>" required>
+
+                        <label for="event-year">Year:</label>
+                        <input type="number" id="event-year" name="year" value="<%= task.year %>" required>
+
+                        <label for="event-hour">Hour:</label>
+                        <input type="number" id="event-hour" name="hour" value="<%= task.hour %>" required>
+
+                        <label for="event-minutes">Minutes:</label>
+                        <input type="number" id="event-minutes" name="minutes" value="<%= task.minutes %>" required>
+
+                        <label for="event-venue">Venue:</label>
+                        <input type="text" id="event-venue" name="venue" value="<%= task.venue %>">
+
+                        <label for="event-notes">Notes:</label>
+                        <textarea id="event-notes" name="notes"><%= task.notes %></textarea>
+
+                        <!-- Add a submit button to submit the form -->
+                        <button type="submit" name="edit_event">Save Event</button>
+                    </form>
+                <% } else { %>
+                    <p>Task not found!</p>
+                <% } %>
+            </div>
+        </div>
+        <!-- End of task-manager-content -->
+    </div>
+    <!-- End of task-manager-container -->
+</body>
+</html>

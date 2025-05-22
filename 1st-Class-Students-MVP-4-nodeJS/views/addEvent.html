@@ -1,0 +1,93 @@
+<!-- addevent.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="taskPageStyle.css">
+    <title>Add Event - Task Manager</title>
+</head>
+<body>
+    <!-- Main container for the entire task manager -->
+    <div class="task-manager-container">
+        <!-- Header section containing live date and small calendar UI -->
+        <div class="header">
+            <div class="live-date"> <!-- Live date display -->
+                <!-- Actual live date content will be dynamically updated here -->
+                <!-- JS Code needed here for real dynamic date display, this is just a placeholder. thx Joseph ;P -->
+                <h2><span id="current-date">Saturday 20-01-2024</span></h2>
+            </div>
+            <div class="small-calendar"> <!-- Small calendar UI -->
+                <!-- Current month calendar content will be dynamically updated here -->
+            </div>
+        </div>
+
+        <!-- Main content section for task manager features -->
+        <div class="task-manager-content">
+            <!-- Task buttons for various actions -->
+            <div class="task-buttons">
+                <a href="/taskPage"><button>Home</button></a>
+                <button>Create New List</button>
+                <a href="/addevent"><button>Add Event</button></a>
+                <a href="/edittask"><button>Edit Event</button></a>
+                <a href="/deletetask"><button>Delete Event</button></a>
+                <button>Auto Schedule Event</button>
+                <button>Add Reminder</button>
+                <button>Import List</button>
+            </div>
+
+            <!-- Add Event form section -->
+            <div class="add-event-section">
+                <form method="post" action="/addevent">
+                    <!-- Add Event form content goes here -->
+                    <!-- Include input fields for various details (day, month, year, hour, minutes, title, venue, notes, etc.) -->
+
+                    <!-- Example input fields -->
+                    <label for="event-title">Title:</label>
+                    <input type="text" id="event-title" name="title" required>
+
+                    <label for="event-day">Day:</label>
+                    <select id="event-day" name="day" required>
+                        <% for (let i = 1; i <= 31; i++) { %>
+                            <option value="<%= i %>"><%= i %></option>
+                        <% } %>
+                    </select>
+
+                    <label for="event-month">Month:</label>
+                    <select id="event-month" name="month" required>
+                        <% const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>
+                        <% months.forEach((month, index) => { %>
+                            <option value="<%= index + 1 %>"><%= month %></option>
+                        <% }); %>
+                    </select>
+
+                    <label for="event-year">Year:</label>
+                    <select id="event-year" name="year" required>
+                        <% const currentYear = new Date().getFullYear(); %>
+                        <% for (let year = currentYear; year <= currentYear + 10; year++) { %>
+                            <option value="<%= year %>"><%= year %></option>
+                        <% } %>
+                    </select>
+
+                    <label for="event-time">Hour:</label>
+                    <input type="number" id="event-hour" name="hour" required>
+
+                    <label for="event-minutes">Minutes:</label>
+                    <input type="number" id="event-minutes" name="minutes" required>
+
+                    <label for="event-venue">Venue:</label>
+                    <input type="text" id="event-venue" name="venue">
+
+                    <label for="event-notes">Notes:</label>
+                    <textarea id="event-notes" name="notes"></textarea>
+
+                    <!-- Add a submit button to submit the form -->
+                    <button type="submit" name="add_event">Add Event</button>
+                </form>
+            </div>
+        </div>
+        <!-- End of task-manager-content -->
+    </div>
+    <!-- End of task-manager-container -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSchedule</title>
+    <link rel="stylesheet" href="css/autoschedulestyles.css">
+    <script src="https://kit.fontawesome.com/1f57387f74.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="backButtonContainer">
+        <button id="backButton"><i class="fa-solid fa-reply"></i></button>
+    </div>
+
+    <table id="autoScheduleTable">
+        <tr>
+            <th colspan="2">AutoSchedule</th>
+            <th class="gap"></th>
+            <th colspan="2"><button id="saveChangesBtn">Save Changes</button></th>
+        </tr>
+        <tr>
+            <td colspan="5">Current Date: <span id="currentDate"></span></td>
+        </tr>
+        <tr>
+            <td colspan="5">Enter Event Title: <input type="text" id="eventTitle"></td>
+        </tr>
+        <tr>
+            <td colspan="5">Select Days to Avoid:
+                <div class="days-container">
+                    <button class="day-button" data-day="Sun">Sun</button>
+                    <button class="day-button" data-day="Mon">Mon</button>
+                    <button class="day-button" data-day="Tue">Tue</button>
+                    <button class="day-button" data-day="Wed">Wed</button>
+                    <button class="day-button" data-day="Thu">Thu</button>
+                    <button class="day-button" data-day="Fri">Fri</button>
+                    <button class="day-button" data-day="Sat">Sat</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">Select Time Period to Avoid:
+                <div class="time-period">
+                    <div class="time-label">Start Time:</div>
+                    <select id="startHour" class="time-select"></select>
+                    <span class="time-separator">:</span>
+                    <select id="startMinute" class="time-select"></select>
+                </div>
+                <div class="time-period">
+                    <div class="time-label">End Time:</div>
+                    <select id="endHour" class="time-select"></select>
+                    <span class="time-separator">:</span>
+                    <select id="endMinute" class="time-select"></select>
+                </div>
+                <button id="addTimePeriodBtn">Add Another Time Period</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">Frequency:
+                <div class="frequency-buttons">
+                    <button class="frequency-button" data-frequency="daily">Daily</button>
+                    <button class="frequency-button" data-frequency="weekly">Weekly</button>
+                    <button class="frequency-button" data-frequency="monthly">Monthly</button>
+                    <button class="frequency-button" data-frequency="annually">Annually</button>
+                    <button class="frequency-button" data-frequency="custom">Custom</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">Time Periods:
+                <div id="timePeriodsContainer">
+                    <div class="time-period" style="display:none;">
+                        <div class="time-label">Start Time:</div>
+                        <select class="time-select startHour"></select>
+                        <span class="time-separator">:</span>
+                        <select class="time-select startMinute"></select>
+
+                        <div class="time-label">End Time:</div>
+                        <select class="time-select endHour"></select>
+                        <span class="time-separator">:</span>
+                        <select class="time-select endMinute"></select>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="js/autoschedulescript.js"></script>
+</body>
+
+</html>

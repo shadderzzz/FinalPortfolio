@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/task.css">
+    <script defer src="js/task.js"></script>
+    <script src="https://kit.fontawesome.com/1f57387f74.js" crossorigin="anonymous"></script>
+    <title>Task Manager</title>
+</head>
+<body>
+    <button id="backButton" onclick="buttonClick('Back')"><i class="fa-solid fa-reply"></i></button>
+    <div class="task-manager-container">
+        <div class="task-manager-content">
+            <div class="task-buttons">
+                <div class="header">
+                    <div class="live-date">
+                        <h2><span id="current-date">Saturday 20-01-2024</span></h2>
+                    </div>
+                    <div class="small-calendar"></div>
+                </div>
+                <button id="createListButton">Create New List</button>
+                <button id="addEventButton">Add Task</button>
+                <button id="editEventButton">Edit Task</button>
+                <button id="deleteEventButton">Delete Task</button>
+                <button id="autoScheduleEventButton">Auto Schedule Task</button>
+                <button id="addReminderButton">Add Reminder</button>
+                <button id="importListButton">Import List</button>
+            </div>
+
+            <div class="task-display-section">
+                <div class="task-display-buttons-container">
+                    <div class="task-display-buttons">
+                        <button id="upcoming-btn">Upcoming Tasks</button>
+                        <button id="completed-btn">Completed Tasks</button>
+                        <button id="all-events-btn">All Events</button>
+                    </div>
+                </div>
+                
+                <div class="selected-header">
+                    <h3><span id="selected-display-title">Tasks in Progress</span></h3>
+                </div>
+
+                <div class="selected-display in-progress-tasks">
+                    <div class="selected-content"></div>
+                </div>
+
+                <div class="task-displays">
+                    <% /* Task Sample #1 */ %>
+                    <div class="task-card in-progress-tasks" id="taskCard1">
+                        <div class="task-box">
+                            <span class="task-title">Task 1</span>
+                            <span class="task-date">Jan 25, 2024</span>
+                            <span class="task-time">10:00 AM</span>
+                        </div>
+                    </div>
+                    <% /* Task Sample #2 */ %>
+                    <div class="task-card in-progress-tasks" id="taskCard2">
+                        <div class="task-box">
+                            <span class="task-title">Task 2</span>
+                            <span class="task-date">Feb 3, 2024</span>
+                            <span class="task-time">2:30 PM</span>
+                        </div>
+                    </div>
+                    <% /* Task Sample #3 */ %>
+                    <div class="task-card in-progress-tasks" id="taskCard3">
+                        <div class="task-box">
+                            <span class="task-title">Task 3</span>
+                            <span class="task-date">Mar 10, 2024</span>
+                            <span class="task-time">5:00 PM</span>
+                        </div>
+                    </div>
+                    <% /* Repeat similar task cards for other display options */ %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

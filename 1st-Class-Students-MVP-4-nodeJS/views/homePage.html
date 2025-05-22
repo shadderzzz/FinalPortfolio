@@ -1,0 +1,65 @@
+<!-- homepage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the HTML document -->
+    <title>Calendar UI</title>
+    <!-- Link to the external stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" href="css/homePageStyles.css">
+    <!-- Link to the external fontawesome library for icons -->
+    <script src="https://kit.fontawesome.com/1f57387f74.js" crossorigin="anonymous"></script>
+    <!-- Link to the settings page -->
+    <link rel="stylesheet" type="text/css" href="css/settingsPage.css">
+</head>
+<body>
+    <!-- Welcome container with settings button and welcome box -->
+    <div class="welcome-container">
+        <button id="settings-button" class="settings-button">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+        <!-- Welcome text for the user -->
+        <div class="welcome-box">
+            <p class="welcome-text">Welcome <%= user_name %></p>
+        </div>
+    </div>
+    <!-- Calendar container holding the month header and table -->
+    <div class="calendar-container">
+        <!-- Month header containing navigation buttons and current month display -->
+        <div class="month-header">
+            <!-- Button to navigate to the previous month -->
+            <button id="prev-month"><i class="fa-solid fa-circle-left"></i></button>
+            <!-- Display of the current month and year -->
+            <h1 id="current-month">January 2024</h1>
+            <!-- Button to navigate to the next month -->
+            <button id="next-month"><i class="fa-solid fa-circle-right"></i></button>
+        </div>
+        <!-- Table for displaying the calendar -->
+        <table class="calendar-table">
+            <thead>
+                <!-- Header row for day abbreviations (Sun, Mon, Tue, etc.) -->
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <!-- Body of the table where the calendar content will be dynamically generated -->
+            <tbody id="calendar-body">
+                <!-- Calendar content goes here -->
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <a href="/taskmanagement"><button id="taskmanagementbutton"><i class="fa-solid fa-list-check"></i> Task Management</button></a>
+    </div>
+    <!-- Script tag to include the JavaScript file -->
+    <script src="js/homePageScript.js"></script>
+</body>
+</html>

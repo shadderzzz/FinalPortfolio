@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/settingsPage.css">
+  <script src="https://kit.fontawesome.com/1f57387f74.js" crossorigin="anonymous"></script>
+  <title>Settings Page</title>
+  
+</head>
+<body>
+  <header>
+    <button id="backButton" onclick="buttonClick('Back')"><i class="fa-solid fa-reply"></i></button>
+    <h1>Settings</h1>
+  </header>
+  <main>
+    <div class="row" onclick="buttonClick('My Account')" id="myAccountButton"> <i class="fa-solid fa-user"></i> &nbsp; My Account</div>
+    <div class="row" onclick="buttonClick('Calendar')" id="calendarButton"> <i class="fa-solid fa-calendar-days"></i> &nbsp; Calendar</div>
+    <div class="row" onclick="buttonClick('Auto-Schedule')" id="autoScheduleButton"> <i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Auto-Schedule</div>
+    <div class="row" onclick="buttonClick('Customize')" id="customizeButton"> <i class="fa-solid fa-pen-to-square"></i> &nbsp; Customize</div>
+    <div class="row" onclick="buttonClick('Sync')" id="syncButton"> <i class="fa-solid fa-arrows-rotate"></i> &nbsp; Sync</div>
+  </main>
+  <script src="js/settingsPage.js"></script>
+</body>
+</html>
+
