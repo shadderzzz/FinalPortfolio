@@ -1,0 +1,227 @@
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===== Back Button Styling ===== */
+.back-button {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.back-button a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #3498db;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.back-button a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* ===== Main Container ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* ===== Header Section (Title + Description) ===== */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2a2a2a;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===== Menu Centering ===== */
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Moves content to the top instead of centered */
+    height: calc(100vh - 200px); /* Reduced height so the buttons are higher up */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between each button */
+}
+
+.menu li {
+    margin: 5px 0; /* Vertical spacing between buttons */
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.menu li a:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Form Container ===== */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Error Message Styling ===== */
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fdecea;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* ===== Register Link ===== */
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #2980b9;
+}
+
+/* ===== Stock Page Recent Searches ===== */
+.stock-page {
+    margin-top: 20px;
+}
+
+.stock-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.recent-searches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recent-searches span {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.recent-searches span:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
