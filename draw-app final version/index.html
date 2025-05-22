@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include the p5.js library -->
+    <script src="lib/p5.min.js"></script>
+    <!-- Include the main script -->
+    <script src="sketch.js"></script>
+    <!-- Include other scripts -->
+    <script src="toolbox.js"></script> <!-- Toolbox file -->
+    <script src="colourPalette.js"></script> <!-- Colour palette file -->
+    <script src="helperFunctions.js"></script> <!-- Helper functions file -->
+    <script src="freehandTool.js"></script> <!-- Freehand tool file -->
+    <script src="lineToTool.js"></script> <!-- Line tool file -->
+    <script src="mirrorDrawTool.js"></script> <!-- Mirror tool file -->
+    <script src="sprayCanTool.js"></script> <!-- Spray can tool file -->
+    <script src="eraserTool.js"></script> <!-- Eraser tool file -->
+    <script src="squareTool.js"></script> <!-- Square tool file -->
+    <script src="starTool.js"></script> <!-- Star tool file -->
+    <script src="backgroundTool.js"></script> <!-- Background tool file -->
+    <script src="stampTool.js"></script> <!-- Stamp tool file -->
+    <!-- Include stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<!-- Main application wrapper -->
+  	<div class="wrapper">
+      <!-- Header box with app name and buttons -->
+      <div class="box header">My Drawing App
+        <button id="clearButton">Clear</button>
+        <button id="saveImageButton">Save Image</button>
+      </div>
+      <!-- Sidebar box for tools -->
+      <div class="box" id="sidebar"></div>
+      <!-- Main canvas for drawing -->
+      <div id="content"></div>
+      <!-- Box for color palette -->
+      <div class="box colourPalette"></div>
+      <!-- Box for tool options -->
+      <div class="box options"></div>
+	</div>
+  </body>
+</html>
